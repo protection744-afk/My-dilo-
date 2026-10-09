@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>تطبيق نقل البث الحي</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>كاميرا النقل المباشر 📹</h2>
+        <p class="desc">ادخل كود الغرفة الموحد على الجهازين للربط</p>
+
+        <div class="input-group">
+            <input type="text" id="roomId" placeholder="أدخل كود الغرفة (مثلاً: 555)">
+        </div>
+
+        <div class="buttons-group">
+            <button id="cameraBtn" class="btn btn-camera">🎥 أنا الكاميرا (المُرسِل)</button>
+            <button id="viewerBtn" class="btn btn-viewer">📺 أنا الشاشة (المستقبل)</button>
+        </div>
+
+        <div class="status-box" id="statusBox">الحالة: جاهز للاتصال</div>
+
+        <div class="video-container">
+            <video id="videoDisplay" autoplay playsinline muted></video>
+        </div>
+    </div>
+
+    <!-- مكتبة Socket.io للربط المباشر -->
+    <script src="https://cdn.socket.io/4.7.2/socket.io.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
